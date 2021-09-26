@@ -1,0 +1,31 @@
+:root{
+    --primary-bg : rgb(2, 85, 2);
+    --other-color : rgb(36, 202, 36);
+}
+
+body{
+    background-color: var(--primary-bg);
+    width : auto;
+}
+
+#container{
+    margin: 5rem auto;
+    padding: 0rem 1rem;
+    border : 1px solid var(--other-color);
+    width: 10rem;
+}
+
+h1{
+    width : 100%;
+}
+
+input, label{
+    display : block;
+    margin-top : 0.5rem;
+    padding: auto;
+    width: 100%;
+}
+
+button{
+    margin-top : 0.5rem;
+}
