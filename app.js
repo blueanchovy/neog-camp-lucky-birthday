@@ -4,21 +4,25 @@ const checkButton = document.querySelector("#check-button");
 const outputSpace = document.querySelector("#output-space");
 
 checkButton.addEventListener("click", () => {
-
-    const dob = dateOfBirth.value;
-    const numToCheck = luckyNumber.value;
-    if(dob&&numToCheck){
-        const sum = calculateSum(dob);
-        if(checkIfLucky(sum, numToCheck)){
-            outputSpace.innerText = "Your Birthday is lucky for you. 🥳 🥳 🥳"
-        }
-        else{
-            outputSpace.innerText = "Your Birthday is not so lucky. 😔😔😔"
-        }
+    if(Number(luckyNumber.value)<1){
+        outputSpace.innerText = "Please enter a lucky number greater than 0";
     }
     else{
-        outputSpace.innerText = "Enter both fields";
-    }
+        const dob = dateOfBirth.value;
+        const numToCheck = luckyNumber.value;
+        if(dob&&numToCheck){
+            const sum = calculateSum(dob);
+            if(checkIfLucky(sum, numToCheck)){
+                outputSpace.innerText = "Your Birthday is lucky for you. 🥳 🥳 🥳"
+            }
+            else{
+                outputSpace.innerText = "Your Birthday is not so lucky. 😔😔😔"
+            }
+        }
+        else{
+            outputSpace.innerText = "Enter both fields";
+        }
+    } 
 });
 
 calculateSum = (dob) => {
