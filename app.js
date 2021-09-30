@@ -10,10 +10,10 @@ checkButton.addEventListener("click", () => {
     if(dob&&numToCheck){
         const sum = calculateSum(dob);
         if(checkIfLucky(sum, numToCheck)){
-            outputSpace.innerText = "Your Birthday is lucky for you."
+            outputSpace.innerText = "Your Birthday is lucky for you. 🥳 🥳 🥳"
         }
         else{
-            outputSpace.innerText = "Your Birthday is not so lucky."
+            outputSpace.innerText = "Your Birthday is not so lucky. 😔😔😔"
         }
     }
     else{
